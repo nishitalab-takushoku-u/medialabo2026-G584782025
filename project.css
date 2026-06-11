@@ -1,0 +1,32 @@
+h1{
+    background-color: lightblue;
+    border-top:solid red 10px;
+    text-shadow: grey 2px 0 10px;
+    font-family:"Georigia",serif;
+}
+b.subtext{
+    background-color:lightgray ;
+}
+h3.title{
+    border-left:solid black 5px;
+    background-color: yellow;
+    margin-block:0px ;
+}
+p.maintext{
+    border-left:solid gray 5px;
+    margin-block:0px ;
+    padding: 5px;
+}
+h3.maintext{
+    border-left:solid gray 5px;
+    margin-block:0px ;
+    padding: 5px;
+}
+ul.maintext{
+    border-left:solid gray 5px;
+    margin-block:0px ;
+    margin-bottom:20px ;
+}
+li{
+    padding-bottom:5px ;
+}
