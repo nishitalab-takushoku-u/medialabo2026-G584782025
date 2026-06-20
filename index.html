@@ -26,23 +26,31 @@
     <h2>各授業回の学習要項</h2>
 
       <h3>第1回 WWWとHTML</h3>
-        <p>今回の授業ではHTMLを使ったWebサイトの基本的な作成方法について学んだ。<br>例として文字の出力の&ltp&gtや改行の&ltbr&gtなどがわかった。他にHTMLのコマンドとして使う記号である&lt&gtや&quot,などは「&amplt」など特殊な書き方をしなければいけない。
+        <p>今回の授業ではHTMLを使ったWebサイトの基本的な作成方法について学んだ。HTMLだけで作ったWebサイトは見出しや段落などの設定された文字サイズによる文章の作成や画像の添付、他サイトのURLを設置するハイパーリンクなどが行える。
+          <br>文字の出力には&ltp&gtや&lth1&gt、改行の&ltbr&gtなどがある。他にHTMLのコマンドとして使う記号である&lt&gtや&quot,などをサイト内の文字として使う際は「&amplt」など特殊な書き方をしなければいけない。
         </p>
         <p>演習の成果:<a href="./practice-html/elements.html"
    			  title="practice-html内のファイルに移動"
    			  target="_blank">演習1-4:HTMLのさまざまな要素</a></p>
 
       <h3>第2回 CSSによるWebページの装飾</h3>
-        <p >abc</p>
+        <p>今回の授業ではcssを使ったWebサイトの装飾方法について学んだ。cssとはHTMLなどでサイトを作る際に装飾の設定を行うための記述で、使うことでテキストボックスの枠や背景の色、文字などに細かく装飾を施せる。
+          <br>CSSの装飾はHTML本体のコードとは別のファイルに記述し、HTMLのプログラム内のhead要素内にlink要素を記述し、そのhrefをcssファイルの名前にすることで使えることがわかった。
+          <br>例:&ltlink rel="stylesheet" href="browser-intro.css"&gt  ("browser-intro.css"というcssを参照)<br>
+        cssの装飾はHTMLのコマンドの種類(&ltp&gtや&lth1&gt)ごとか、その中のclassごとに文字の色や影、ボックスの余白などを変更できることがわかった。</p>
         <p>演習の成果:<a href="practice-css/browser-intro.html"
-   			  title=""
+   			  title="practice-css内のファイルに移動"
    			  target="_blank">演習:2-3:ウェブブラウザ説明ページの装飾</a></p>
 
       <h3>第3回 JavaScriptの基本</h3>
-        <p>abc</p>
-        <p>演習の成果:<a href=""
-   			  title=""
-   			  target="_blank">演習:</a></p>
+        <p>今回の授業ではjavascriptを使ったWebコンソールの変更や配列データの参照を行った。
+          <br>javascriptは.jsというファイルで書き、実装するにはcssのようにHTMLファイルのhead要素内に次の要素の記載が必要になることがわかった。
+          <br>例:&ltscript src="tv-program.js" defer&gt&lt/script&gt("tv-program.js"というjavascriptを参照)
+          <br>javascriptで配列の内容をコンソールに書き出す際に有用なコマンドがfor ofコマンドで記述した配列の最初から最後までを順番にみるコマンドだとわかった。
+        </p>
+        <p>演習の成果:<a href="practice-js/obj-practice.html"
+   			  title="practice-js内のファイルに移動"
+   			  target="_blank">演習:3-6:オブジェクトの参照</a></p>
 
       <h3>第4回 DOMとJavaScript</h3>
         <p>abc</p>
