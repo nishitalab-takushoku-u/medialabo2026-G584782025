@@ -15,7 +15,65 @@ function print(data) {
 
 // 課題5-1 の関数 printDom() はここに記述すること
 function printDom(data) {
+  let num=1;
+  let div = document.createElement('div');
+  let body = document.querySelector('body');
+  body.insertAdjacentElement('beforeend',div)
+  div.setAttribute('id','result')
 
+  let b =document.createElement('b');
+  div.insertAdjacentElement('beforeend',b);
+  b.textContent="(検索結果"+data.list.g1.length+"件)";
+  b.classList.add('subtext'); 
+
+  for(let i of data.list.g1){
+    let h3 =document.createElement('h3');
+    div.insertAdjacentElement('beforeend',h3);
+    h3.textContent=num+"件目:"+i.title;
+    h3.classList.add('title'); 
+
+    h3 =document.createElement('h3');
+    div.insertAdjacentElement('beforeend',h3);
+    h3.textContent="番組説明";
+    h3.classList.add('maintext'); 
+
+    let p =document.createElement('p');
+    div.insertAdjacentElement('beforeend',p);
+    p.textContent=i.subtitle;
+    p.classList.add('maintext'); 
+
+    p =document.createElement('p');
+    div.insertAdjacentElement('beforeend',p);
+    p.textContent="開始時刻:"+i.start_time;
+    p.classList.add('maintext'); 
+
+    p =document.createElement('p');
+    div.insertAdjacentElement('beforeend',p);
+    p.textContent="終了時刻:"+i.end_time
+    p.classList.add('maintext'); 
+
+    h3 =document.createElement('h3');
+    div.insertAdjacentElement('beforeend',h3);
+    h3.textContent="出演者";
+    h3.classList.add('maintext'); 
+
+    let ul =document.createElement('ul');
+    div.insertAdjacentElement('beforeend',ul);
+    if(i.act==""){
+      let li = document.createElement("li");
+      ul.insertAdjacentElement('beforeend',li);
+      li.textContent="記載なし";
+    }
+    else{
+      for (let acts of i.act.split("，")) {
+        let li = document.createElement("li");
+        ul.insertAdjacentElement('beforeend',li);
+        li.textContent=acts;
+      }
+    }
+    num++;
+    ul.classList.add('maintext'); 
+  }
 }
 
 // 課題6-1 のイベントハンドラ登録処理は以下に記述

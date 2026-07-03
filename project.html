@@ -8,6 +8,31 @@
   </head>
     <body>
         <h1>NHK番組表の検索結果</h1>
+        <p>
+            チャンネル
+            <input type="text" name="channel" id="channel" list="channel_list" maxlength="0">
+            <datalist id="channel_list">
+                <option value="NHK総合1"></option>
+                <option value="Eテレ1"></option>
+            </datalist>
+            <br>　ジャンル
+            <input type="search" name="genre" id="genre" list="genre_list" maxlength="0">
+            <datalist id="genre_list">
+                <option value="ニュース・報道"></option>
+                <option value="スポーツ"></option>
+                <option value="情報・ワイドショー"></option>
+                <option value="ドラマ"></option>
+                <option value="音楽"></option>
+                <option value="バラエティ"></option>
+                <option value="映画"></option>
+                <option value="アニメ"></option>
+                <option value="ドキュメンタリー・教養"></option>
+                <option value="劇場・公演"></option>
+                <option value="趣味・教育"></option>
+                <option value="福祉"></option>
+            </datalist>
+	        <button id="print">検索</button>
+        </p>
         <b class="subtext">(検索結果2件)</b>
         <h3 class="title">1件目:
             みんなのうた<br>「ごっつぉさま」/「超変身！ミラクルフォーマーズ」
@@ -39,6 +64,7 @@
             <li>【脚本】加納新太</li>
             <li>【原案】江口寿史</li>
         </ul>
+        
     </body>
 </html>
 
