@@ -16,6 +16,7 @@ p.maintext{
     border-left:solid gray 5px;
     margin-block:0px ;
     padding: 5px;
+    font-weight: bold;
 }
 h3.maintext{
     border-left:solid gray 5px;
@@ -26,6 +27,7 @@ ul.maintext{
     border-left:solid gray 5px;
     margin-block:0px ;
     margin-bottom:40px ;
+    font-weight: bold;
 }
 li{
     padding-bottom:5px ;

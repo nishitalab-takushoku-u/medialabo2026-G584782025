@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>検索</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"></script>
     <link rel="stylesheet" href="project.css">
     <script src="tv-program.js" defer></script>
   </head>
@@ -10,61 +11,30 @@
         <h1>NHK番組表の検索結果</h1>
         <p>
             チャンネル
-            <input type="text" name="channel" id="channel" list="channel_list" maxlength="0">
+            <input type="search" name="channel" id="channel" list="channel_list" maxlength="0" placeholder="検索チャンネル">
             <datalist id="channel_list">
-                <option value="NHK総合1"></option>
-                <option value="Eテレ1"></option>
+                <option value="g1">NHK総合1</option>
+                <option value="e1">Eテレ1</option>
             </datalist>
             <br>　ジャンル
-            <input type="search" name="genre" id="genre" list="genre_list" maxlength="0">
+            <input type="search" name="genre" id="genre" list="genre_list" maxlength="0" placeholder="検索ジャンル">
             <datalist id="genre_list">
-                <option value="ニュース・報道"></option>
-                <option value="スポーツ"></option>
-                <option value="情報・ワイドショー"></option>
-                <option value="ドラマ"></option>
-                <option value="音楽"></option>
-                <option value="バラエティ"></option>
-                <option value="映画"></option>
-                <option value="アニメ"></option>
-                <option value="ドキュメンタリー・教養"></option>
-                <option value="劇場・公演"></option>
-                <option value="趣味・教育"></option>
-                <option value="福祉"></option>
+                <option value="0000">ニュース・報道</option>
+                <option value="0100">スポーツ</option>
+                <option value="0205">情報・ワイドショー</option>
+                <option value="0300">ドラマ</option>
+                <option value="0409">音楽</option>
+                <option value="0502">バラエティ</option>
+                <option value="0600">映画</option>
+                <option value="0700">アニメ</option>
+                <option value="0800">ドキュメンタリー・教養</option>
+                <option value="0903">劇場・公演</option>
+                <option value="1000">趣味・教育</option>
+                <option value="1100">福祉</option>
             </datalist>
-	        <button id="print">検索</button>
+	        <button id="sendRequest">検索</button>
+            <div id="result"><div>
         </p>
-        <b class="subtext">(検索結果2件)</b>
-        <h3 class="title">1件目:
-            みんなのうた<br>「ごっつぉさま」/「超変身！ミラクルフォーマーズ」
-        </h3>
-        <h3 class="maintext">番組説明</h3>
-        <p class="maintext"><b>「ごっつぉさま」うた：須貝智郎／「超変身！ミネラルフォーマーズ」うた：鬼龍院翔ｆｒｏｍゴールデンボンバー</br></p>
-        <p class="maintext"><b>開始時刻:2022-03-04 04:35:00<br>
-        <b>終了時刻:2022-03-04 04:40:00</b></p>
-
-        
-        <h3 class="maintext">出演者</h3>
-        <ul class="maintext">
-            <li>記載なし</li>
-        </ul>
-
-        <br>
-        <h3 class="title">2件目:
-            パラスポーツ×アニメ「アニ×パラ」<br>▽パラアルペンスキーテーマ曲江口寿史×ＡＣＣ
-        </h3>
-        <h3 class="maintext">番組説明</h3>
-        <p class="maintext"><b>パラスポーツの魅力をアニメで伝える番組。高速滑走に挑む精神力が試されるパラアルペンスキーを描く。<br>キャラ原案：江口寿史／曲：Ａｗｅｓｏｍｅ　Ｃｉｔｙ　Ｃｌｕｂ</br></p>
-        <p class="maintext"><b>開始時刻:2022-03-04 23:05:00<br>
-        終了時刻:2022-03-04 23:10:00</br></p>
-        <h3 class="maintext">出演者</h3>
-        <ul class="maintext">
-            <li>【声】松本まりか</li>
-            <li>【出演】Ａｗｅｓｏｍｅ　Ｃｉｔｙ　Ｃｌｕｂ</li>
-            <li>【監督】西村一彦</li>
-            <li>【脚本】加納新太</li>
-            <li>【原案】江口寿史</li>
-        </ul>
-        
     </body>
 </html>
 
